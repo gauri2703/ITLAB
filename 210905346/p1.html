@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-3.7.1.min.js"></script>
+<script  type="text/javascript">
+$(document).ready(function(){
+ $("tr:first").css({"background-color" : "red"})
+ $("tr:last").css({"background-color" : "yellow"})
+ $("tr:nth-child(2)").css({"background-color" : "yellow"})
+ $("tr:nth-child(3)").css({"background-color" : "red"})
+
+  $(".btn1").click(function(){
+    $("#ani").animate({marginLeft: "+=100px"});
+  });
+  $(".btn2").click(function(){
+    $("#ani").animate({marginLeft: "0"});
+  });
+});
+</script>
+</head>
+<body>
+
+<button class="btn1">Animate</button>
+<button class="btn2">Reset</button>
+
+<div  id="ani">
+    <table>
+            <tr id="color1">
+              <th>Column 1</th>
+              <th>Column 2</th>
+              <th>Column 3</th>
+            </tr>
+            <tr>
+              <td>Data 1</td>
+              <td>Data 2</td>
+              <td>Data 3</td>
+            </tr>
+            <tr>
+              <td>Data 4</td>
+              <td>Data 5</td>
+              <td>Data 6</td>
+            </tr>
+            <tr>
+              <td>Data 7</td>
+              <td>Data 8</td>
+              <td>Data 9</td>
+            </tr>
+          </table>
+
+          <img src="image.jpg" alt="Image" width="200" height="200" />
+</div>
+
+</body>
+</html>
